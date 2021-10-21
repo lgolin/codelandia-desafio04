@@ -26,8 +26,8 @@ You can view the project layout through the links below:
 
 ```bash
 # Clone the project and access the folder.
-git clone https://github.com/lgolin/codelandia-desafio03.git
-cd codelandia-desafio03
+git clone https://github.com/lgolin/codelandia-desafio04.git
+cd codelandia-desafio04
 ```
 
 **OBS:** It is recommended that you use liveserver to access the project on your local server [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)

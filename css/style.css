@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+  --dark-grey: rgb(26, 32, 44);
+  --snow: #f7fafc;
+  --white: #fff;
+
+  --lato: 'Lato', sans-serif;
+  --merriweather: 'Merriweather', serif;
+
+  --14px: 0.875rem;
+  --1rem: 1rem;
+  --26px: 1.625rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+body {
+  color: var(--dark-grey);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 50%;
+  background: var(--snow);
+}
+
+.right-side {
+  flex: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 5rem;
+}
+
+.container_login {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cabecalho {
+  font-family: var(--merriweather);
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2.5rem;
+}
+
+.cabecalho p {
+  margin-bottom: 0.437rem;
+  font: 400 1rem/1.25rem var(--merriweather);
+}
+
+.cabecalho h2 {
+  font: 700 1.625rem/2.042rem var(--merriweather);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.875rem;
+}
+
+form label,
+input {
+  margin-bottom: 0.687rem;
+}
+
+form label {
+  font: 400 1rem/1.2rem var(--lato);
+}
+
+form input {
+  width: 350px;
+  height: 50px;
+
+  font: 400 0.875rem/1rem var(--lato);
+  padding: 1.25rem 0.937rem;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+
+.custom_radio input {
+  display: none;
+}
+
+.custom_radio input + label:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  background-color: #f7fafc;
+
+  border: 1px solid #e8e8e8;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.custom_radio input:checked + label:before {
+  background-color: #f7fafc;
+  box-sizing: border-box; /* vai fazer a borda crescer para dentro */
+  border: 3px solid #bd93f9;
+  padding: 4px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  font: 400 0.875rem/1rem var(--lato);
+
+  margin-bottom: 1.562rem;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  transition: background 0.3s;
+  opacity: 1;
+}
+
+.entrar {
+  border: none;
+
+  margin-bottom: 15px;
+  background: var(--green);
+  border-radius: 5px;
+
+  color: var(--white);
+  font: 700 1rem/19.2px var(--lato);
+}
+
+.google {
+  position: relative;
+  border: none;
+
+  background: var(--dark-grey);
+  border-radius: 5px;
+
+  color: var(--white);
+  font: 700 1rem/19.2px var(--lato);
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+i {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  font: 400 1rem/18.75px var(--lato);
+  padding-top: 7rem;
+}
+
+footer span {
+  margin-left: 0.3rem;
+}
+
+/*  ====== Media queries ===== */
+@media screen and (max-width: 800px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    padding-top: 5rem;
+  }
+
+  footer {
+    padding-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  footer {
+    padding-top: 4rem;
+  }
+}
